@@ -2,6 +2,15 @@ body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
+:root{
+  --main-color: #ff4c68;
+  --secondary-color: #ef8172;
+  --white-color: #fff;
+  --black-color: #000;
+  --grey-color: #f2f2f2;
+  --light-grey-color: #f2f2f2;
+  --dark-grey-color: #333;
+}
 
 #title {
   background-color: #ff4c68;
@@ -36,10 +45,20 @@ p {
   font-weight: 900;
 }
 
+.colored-section{
+  background-color: var(--main-color);
+  color: var(--white-color);
+}
+.white-section{
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
 /* Navigation Bar  */
 .navbar-brand {
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--white-color);
+  font-weight: 900;
   font-family: "Ubuntu", sans-serif;
   /* font-weight: bold; */
 }
@@ -50,7 +69,7 @@ p {
 .nav-link {
   font-size: 1.2rem;
   font-weight: 400;
-  color: whitesmoke;
+  color: var(--white-color);
 }
 
 /* Download button  */
@@ -69,7 +88,6 @@ p {
 /* Feature Section  */
 #features {
   padding: 7% 15%;
-  background-color: #fff;
   position: relative;
 }
 .feature-box {
@@ -81,17 +99,17 @@ p {
 
 /* icons  */
 .icons {
-  color: #ef8172;
+  color: var(--secondary-color);
   margin-bottom: 1rem;
 }
 .icons:hover {
-  color: #ff4c68;
+  color: var(--main-color);
   transition: 0.2s ease-in;
 }
 
 #testimonials {
-  background-color: #ef8172;
-  color: #fff;
+  background-color: var(--secondary-color)
+
 }
 
 .testimonial-text {
@@ -109,7 +127,7 @@ p {
 }
 
 #press {
-  background-color: #ef8172;
+  background-color: var(--secondary-color);
   padding-bottom: 3%;
 }
 
@@ -132,7 +150,6 @@ p {
 }
 
 #cta {
-  background-color: #ff4c68;
   text-align: center;
   padding: 5% 15%;
 }
@@ -141,7 +158,7 @@ p {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--white-color);
 }
 
 #footer {
