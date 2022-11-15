@@ -1,15 +1,18 @@
 body {
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  
 }
 :root{
   --main-color: #ff4c68;
   --secondary-color: #ef8172;
   --white-color: #fff;
   --black-color: #000;
-  --grey-color: #f2f2f2;
+  --grey-color: #8f8f8f;
   --light-grey-color: #f2f2f2;
   --dark-grey-color: #333;
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Ubuntu", sans-serif;
 }
 
 #title {
@@ -27,12 +30,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
 
 p {
-  color: #8f8f8f;
+  color: var(--grey-color);
   text-align: center;
 }
 .navbar {
@@ -59,7 +61,7 @@ p {
   font-size: 2.5rem;
   color: var(--white-color);
   font-weight: 900;
-  font-family: "Ubuntu", sans-serif;
+  font-family: var(--secondary-font);
   /* font-weight: bold; */
 }
 
@@ -155,7 +157,6 @@ p {
 }
 
 #cta .title {
-  font-family: "Montserrat", sans-serif;
   font-size: 3rem;
   font-weight: 700;
   color: var(--white-color);
@@ -169,7 +170,7 @@ p {
 }
 .footer-icon {
   font-size: 1rem;
-  color: #808080;
+  color: var(--grey-color);
   margin: 0 10px;
 }
 
