@@ -5,13 +5,20 @@
 
 // $("h1").text("Bye").addClass("red");
 
-// $("button").on("click", function() {
-//     $("p").slideDown().slideUp().animate({opacity: 0.5
-    
-//     });
+$("button").click(function() {
+    $("p").toggle();
+})
 
-// });
+// $("input").keypress(function(event) {
+//     $("h1").text(event.key)
+// })
+// $("input").on("keypress", function(event) {
+//     $("h1").text(event.key)
+// })
 
 
-$("p").text("New Text");
+
+// $("p").text("New Text");
+
+$("input").remove();
 
