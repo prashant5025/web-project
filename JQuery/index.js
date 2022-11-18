@@ -5,9 +5,9 @@
 
 // $("h1").text("Bye").addClass("red");
 
-$("button").click(function() {
-    $("p").toggle();
-})
+// $("button").click(function() {
+//     $("p").toggle();
+// })
 
 // $("input").keypress(function(event) {
 //     $("h1").text(event.key)
@@ -20,5 +20,8 @@ $("button").click(function() {
 
 // $("p").text("New Text");
 
-$("input").remove();
+// $("input").remove();
 
+$("button").on("click", function() {
+    $("p").slideLeft();
+})
