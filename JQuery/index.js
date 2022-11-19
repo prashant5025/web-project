@@ -22,6 +22,7 @@
 
 // $("input").remove();
 
-$("button").on("click", function() {
-    $("p").slideLeft();
-})
+
+$("button").on("click", function () {
+    $("p").toggle().animate({opacity: 0.5});
+});
