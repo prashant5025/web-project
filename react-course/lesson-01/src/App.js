@@ -2,7 +2,8 @@
 function App() {
   return (
     <div className="App">
-      <h1>Hello from User</h1>
+      <h1>React App</h1>
+      
     </div>
   );
 }
