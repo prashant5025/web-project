@@ -35,6 +35,7 @@ const ExpenseForm = () => {
         setUserInput((prevState) => {
             return {...prevState, enteredDate: e.target.value}
         })
+        
     }
   return (
     <form>
