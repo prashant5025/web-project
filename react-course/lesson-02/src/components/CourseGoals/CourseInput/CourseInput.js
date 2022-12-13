@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import styled from 'styled-components'
 
 import Button from "../../UI/Button/Button";
 import "./CourseInput.css";
+
+const FormControl = styled.div`
+`
 
 const CourseInput = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
