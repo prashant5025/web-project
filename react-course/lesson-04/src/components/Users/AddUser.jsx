@@ -3,6 +3,7 @@ import Button from "../UI/Button";
 import Card from "../UI/Card";
 
 import classes from "./AddUser.module.css";
+import UserList from "./UserList";
 
 const AddUser = (props) => {
   const [enteredUsername, setEnteredUsername] = useState("");
@@ -60,6 +61,7 @@ const AddUser = (props) => {
         />
         <Button type="submit">Add User</Button>
       </form>
+      
     </Card>
   );
 };
