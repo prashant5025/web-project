@@ -49,7 +49,7 @@ const AddUser = (props) => {
   }
   return (
     <div>
-      {error && <ErrorModel title={error.title} message={error.message} />}
+      {error && <ErrorModel title={error.title} message={error.message} onConfirm={errorHandler}/>}
       <Card className={classes.input}>
         <form onSubmit={addUserHandler}>
           <label htmlFor="username">Username</label>
@@ -72,7 +72,7 @@ const AddUser = (props) => {
             onChange={ageChangeHandler}
             placeholder="Enter Your Age"
           />
-          <Button type="submit">Add User</Button>
+          <Button type="submit" onClick={props.onConfirm}>Add User</Button>
         </form>
       </Card>
     </div>
