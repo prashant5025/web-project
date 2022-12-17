@@ -43,6 +43,7 @@ const AddUser = (props) => {
           type="text"
           name="username"
           id="username"
+          value={enteredUsername}
           onChange={usernameChangeHandler}
           placeholder="Enter Your Name"
         />
@@ -53,6 +54,7 @@ const AddUser = (props) => {
           type="number"
           name="username"
           id="age"
+          value={enteredAge}
           onChange={ageChangeHandler}
           placeholder="Enter Your Age"
         />
