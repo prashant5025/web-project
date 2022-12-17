@@ -72,7 +72,7 @@ const AddUser = (props) => {
             onChange={ageChangeHandler}
             placeholder="Enter Your Age"
           />
-          <Button type="submit" onClick={props.onConfirm}>Add User</Button>
+          <Button type="submit">Add User</Button>
         </form>
       </Card>
     </div>
