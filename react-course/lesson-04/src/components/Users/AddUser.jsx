@@ -6,16 +6,14 @@ import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
 
 const AddUser = (props) => {
-
+  //when we use ref, we don't need to use state
+  // ref are uncontrolled components and they are not part of the react state so they don't cause re-rendering
   const nameInputRef = useRef();
   const AgeInputRef = useRef();
 
-
   const [error, setError] = useState();
 
-
   const addUserHandler = (event) => {
-
     event.preventDefault();
     const enteredName = nameInputRef.current.value;
     const enteredUserAge = AgeInputRef.current.value;
@@ -36,9 +34,10 @@ const AddUser = (props) => {
     }
 
     props.onAddUser(enteredName, enteredUserAge);
+    // these are uncontrolled inputs
+    // so we can't use the value property
     nameInputRef.current.value = "";
     AgeInputRef.current.value = "";
-
   };
 
   const errorHandler = () => {
@@ -60,7 +59,6 @@ const AddUser = (props) => {
             type="text"
             name="username"
             id="username"
-
             ref={nameInputRef}
             placeholder="Enter Your Name"
           />
@@ -71,7 +69,6 @@ const AddUser = (props) => {
             type="number"
             name="username"
             id="age"
-
             ref={AgeInputRef}
             placeholder="Enter Your Age"
           />
