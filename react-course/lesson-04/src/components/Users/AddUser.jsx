@@ -10,17 +10,9 @@ const AddUser = (props) => {
   const nameInputRef = useRef();
   const AgeInputRef = useRef();
 
-  const [enteredUsername, setEnteredUsername] = useState("");
-  const [enteredAge, setEnteredAge] = useState("");
+
   const [error, setError] = useState();
 
-  const usernameChangeHandler = (e) => {
-    setEnteredUsername(e.target.value);
-  };
-
-  const ageChangeHandler = (e) => {
-    setEnteredAge(e.target.value);
-  };
 
   const addUserHandler = (event) => {
 
@@ -45,8 +37,6 @@ const AddUser = (props) => {
 
     props.onAddUser(enteredName, enteredUserAge);
 
-    setEnteredUsername("");
-    setEnteredAge("");
   };
 
   const errorHandler = () => {
@@ -68,8 +58,7 @@ const AddUser = (props) => {
             type="text"
             name="username"
             id="username"
-            value={enteredUsername}
-            onChange={usernameChangeHandler}
+
             ref={nameInputRef}
             placeholder="Enter Your Name"
           />
@@ -80,8 +69,7 @@ const AddUser = (props) => {
             type="number"
             name="username"
             id="age"
-            value={enteredAge}
-            onChange={ageChangeHandler}
+
             ref={AgeInputRef}
             placeholder="Enter Your Age"
           />
