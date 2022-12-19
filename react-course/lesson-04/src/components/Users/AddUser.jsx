@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ErrorModel from "../ErrorModel/ErrorModel";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
@@ -6,6 +6,10 @@ import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
 
 const AddUser = (props) => {
+
+  const nameInputRef = useRef();
+  const AgeInputRef = useRef();
+
   const [enteredUsername, setEnteredUsername] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
   const [error, setError] = useState();
@@ -19,8 +23,11 @@ const AddUser = (props) => {
   };
 
   const addUserHandler = (event) => {
+
     event.preventDefault();
-    if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
+    const enteredName = nameInputRef.current.value;
+    const enteredUserAge = AgeInputRef.current.value;
+    if (enteredName.trim().length === 0 || enteredUserAge.trim().length === 0) {
       setError({
         title: "Invalid input",
         message: "Please enter a valid name and age (non-empty values).",
@@ -28,7 +35,7 @@ const AddUser = (props) => {
       return;
     }
 
-    if (+enteredAge < 1) {
+    if (+enteredUserAge < 1) {
       setError({
         title: "Invalid age",
         message: "Please enter a valid age (> 0).",
@@ -36,7 +43,7 @@ const AddUser = (props) => {
       return;
     }
 
-    props.onAddUser(enteredUsername, enteredAge);
+    props.onAddUser(enteredName, enteredUserAge);
 
     setEnteredUsername("");
     setEnteredAge("");
@@ -63,6 +70,7 @@ const AddUser = (props) => {
             id="username"
             value={enteredUsername}
             onChange={usernameChangeHandler}
+            ref={nameInputRef}
             placeholder="Enter Your Name"
           />
           <label className="" htmlFor="age">
@@ -74,6 +82,7 @@ const AddUser = (props) => {
             id="age"
             value={enteredAge}
             onChange={ageChangeHandler}
+            ref={AgeInputRef}
             placeholder="Enter Your Age"
           />
           <Button type="submit">Add User</Button>
