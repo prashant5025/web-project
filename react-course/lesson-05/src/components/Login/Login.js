@@ -12,8 +12,8 @@ const emailReducer = (state, action) => {
     return {value: state.value, isValid: state.value.includes('@')}
   }
 
-  
-  return {value: '', isValid: false};
+
+  return {value: '', isValid: null};
 };
 
 const Login = (props) => {
@@ -25,7 +25,7 @@ const Login = (props) => {
 
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
     value: '',
-    isValid: false
+    isValid: null
   });
 
   // useEffect(() => {
