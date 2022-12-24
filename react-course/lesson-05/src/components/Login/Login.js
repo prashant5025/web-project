@@ -4,10 +4,13 @@ import Card from '../UI/Card/Card';
 import classes from './Login.module.css';
 import Button from '../UI/Button/Button';
 
+
+// global const
 const ACTION = {
   USER_INPUT: 'USER_INPUT',
   INPUT_BLUR: 'INPUT_BLUR'
 }
+
 
 const emailReducer = (state, action) => {
   if (action.type === ACTION.USER_INPUT){
