@@ -24,6 +24,17 @@ const emailReducer = (state, action) => {
   return {value: '', isValid: null};
 };
 
+const passwordReducer = (state, action) => {
+  if (action.type === ACTION.USER_INPUT){
+    return {value: action.val, isValid: action.val.trim().length > 6}
+  }
+  if (action.type === ACTION.INPUT_BLUR){
+    return {value: state.value, isValid: state.value.trim().length > 6}
+  }
+
+  return {value: '', isValid: null}
+}
+
 const Login = (props) => {
   // const [enteredEmail, setEnteredEmail] = useState('');
   // const [emailIsValid, setEmailIsValid] = useState();
@@ -35,6 +46,8 @@ const Login = (props) => {
     value: '',
     isValid: null
   });
+
+  use
 
   // useEffect(() => {
   //   console.log('EFFECT RUNNING');
