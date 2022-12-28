@@ -58,6 +58,12 @@ const Login = (props) => {
   //   console.log('EFFECT RUNNING');
   // }, [enteredEmail])
 
+    // alias assignment
+  const {isValid: emailIsValid} = emailState;
+  const {isValid: passwordIsValid} = passwordState;
+
+
+
   useEffect(() => {
     const identifier = setTimeout(() => {
       console.log('Checking form validity!');
@@ -72,7 +78,7 @@ const Login = (props) => {
       clearTimeout(identifier);
 
     }
-  },[emailState, passwordState])
+  },[emailIsValid, passwordIsValid])
 
   const emailChangeHandler = (event) => {
     dispatchEmail({type: ACTION.USER_INPUT, val: event.target.value});
